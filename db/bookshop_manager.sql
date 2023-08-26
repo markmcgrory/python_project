@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS wholesalers;
 
 CREATE TABLE wholesalers (
-    
+
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     contact_person VARCHAR(255),
@@ -20,7 +20,7 @@ CREATE TABLE books(
     publication_year INT,
     copies INT,
     cost_price FLOAT,
-    sell_price FLOAT,
+    markup FLOAT,
     wholesaler_id INT NOT NULL REFERENCES wholesalers(id) ON DELETE CASCADE
 
 );

@@ -1,13 +1,12 @@
 from db.run_sql import run_sql
 
 from models.book import Book
-from models.wholesaler import Wholesaler
 import repositories.wholesaler_repository as wholesaler_repository
 
 
 def save(book):
-    sql = "INSERT INTO books (title, author, genre, publisher, publication_year, copies, cost_price, sell_price, wholesaler_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [book.title, book.author, book.genre, book.publisher, book.publication_year, book.copies, book.cost_price, book.sell_price, book.wholesaler.id]
+    sql = "INSERT INTO books (title, author, genre, publisher, publication_year, copies, cost_price, markup, wholesaler_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [book.title, book.author, book.genre, book.publisher, book.publication_year, book.copies, book.cost_price, book.markup, book.wholesaler.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     book.id = id
@@ -22,7 +21,7 @@ def select_all():
 
     for row in results:
         wholesaler = wholesaler_repository.select(row['wholesaler_id'])
-        book = Book(row['title'], row['author'], row['genre'], row['publisher'], row['publication_year'], row ['copies'], row['cost_price'], row['sell_price'], wholesaler, row ['id'])
+        book = Book(row['title'], row['author'], row['genre'], row['publisher'], row['publication_year'], row ['copies'], row['cost_price'], row['markup'], wholesaler, row ['id'])
         books.append(book)
     return books
 
@@ -41,3 +40,10 @@ def delete(id):
     sql = "DELETE FROM books WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(book):
+    sql = "UPDATE books SET (title, author, genre, publisher, publication_year, copies, cost_price, markup, wholesaler_id) = (%s, %s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [book.title, book.author, book.genre, book.publisher, book.publication_year, book.copies, book.cost_price, book.markup, book.wholesaler.id]
+    print(values)
+    run_sql(sql, values)
+
