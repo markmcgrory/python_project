@@ -36,3 +36,5 @@ book_repository.save(book9)
 book10 = Book("Fresh-Air Fiend", "Paul Theroux", "Nonfiction", "Penguin Books", 2001, 2, 4.50, 7.99, wholesaler3)
 book_repository.save(book10)
 
+
+pdb.set_trace()
