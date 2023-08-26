@@ -34,10 +34,10 @@ def select(id):
     results = run_sql(sql, values)
 
 def delete_all():
-    sql = "DELETE  FROM books"
+    sql = "DELETE FROM books"
     run_sql(sql)
 
 def delete(id):
-    sql = "DELETE  FROM books WHERE id = %s"
+    sql = "DELETE FROM books WHERE id = %s"
     values = [id]
     run_sql(sql, values)

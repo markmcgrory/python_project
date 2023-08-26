@@ -19,7 +19,7 @@ def select(id):
     results = run_sql(sql, values)
 
 def delete_all():
-    sql = "DELETE  FROM wholesalers"
+    sql = "DELETE FROM wholesalers"
     run_sql(sql)
 
 
