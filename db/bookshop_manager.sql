@@ -5,7 +5,7 @@ CREATE TABLE wholesalers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     contact_person VARCHAR(255),
-    contact_phone INT(255),
+    contact_phone VARCHAR (255),
     contact_email VARCHAR(255)
 
 
