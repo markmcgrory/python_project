@@ -12,7 +12,6 @@ def save(book):
     book.id = id
     return book
 
-
 def select_all():
     books = []
 

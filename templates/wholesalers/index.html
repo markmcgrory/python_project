@@ -4,7 +4,9 @@
 
 {% for wholesaler in wholesalers %}
 
-{{wholesaler.name}}
+<p>
+    <a style="text-decoration:none" href=wholesalers/{{wholesalers.index(wholesaler)}}> {{wholesaler.name}}</a>
+    </p>
     
 {% endfor %}
     
