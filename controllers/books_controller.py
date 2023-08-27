@@ -11,6 +11,11 @@ def books():
     books = book_repository.select_all()
     return render_template("books/index.html", books = books)
 
+@books_blueprint.route("/books/<id>", methods=['GET'])
+def show_book(id):
+    book = book_repository.select(id)
+    return render_template('books/show.html', book=book)
+
 @books_blueprint.route("/books", methods=['POST'])
 def create_book():
     title = request.form['title']
@@ -26,10 +31,6 @@ def create_book():
     book_repository.save(book)
     return redirect('/books')
 
-@books_blueprint.route("/books/<id>", methods=['GET'])
-def show_book(id):
-    book = book_repository.select(id)
-    return render_template('books/show.html', book = book)
 
 
 @books_blueprint.route("/books/<id>/delete", methods=['POST'])

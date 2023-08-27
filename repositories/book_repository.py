@@ -31,6 +31,12 @@ def select(id):
     values = [id]
     results = run_sql(sql, values)
 
+    if results:
+        result = results[0]
+        wholesaler = wholesaler_repository.select(result['wholesaler_id'])
+        book = Book(result['title'], result['author'], result['genre'], result['publisher'], result['publication_year'], result['copies'], result['cost_price'], result['markup'], wholesaler, result['id'])
+    return book
+
 def delete_all():
     sql = "DELETE FROM books"
     run_sql(sql)
@@ -45,4 +51,16 @@ def update(book):
     values = [book.title, book.author, book.genre, book.publisher, book.publication_year, book.copies, book.cost_price, book.markup, book.wholesaler.id]
     print(values)
     run_sql(sql, values)
+
+def filter_by_wholesaler(wholesaler):
+    books = []
+
+    sql = "SELECT * FROM books WHERE wholesaler_id = %s"
+    values = [wholesaler.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        book = Book(row['title'], row['author'], row['genre'], row['publisher'], row['publication_year'], row ['copies'], row['cost_price'], row['markup'], wholesaler, row ['id'])
+        books.append(book)
+    return books
 

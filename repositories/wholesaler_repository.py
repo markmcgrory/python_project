@@ -29,6 +29,10 @@ def select(id):
     sql = "SELECT * FROM wholesalers WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)
+    if results:
+        result = results[0]
+        wholesaler = Wholesaler(result['name'], result['contact_person'], result['contact_phone'], result['contact_email'], result['id'])
+    return wholesaler
 
 
 def delete(id):
