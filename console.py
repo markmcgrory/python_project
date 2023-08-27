@@ -37,7 +37,6 @@ book10 = Book("Fresh-Air Fiend", "Theroux, Paul", "Nonfiction", "Penguin Books",
 book_repository.save(book10)
 
 
-
 pdb.set_trace()
 
 

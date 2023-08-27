@@ -4,9 +4,13 @@
 
 {% for book in books %}
 <p>
-<a style="text-decoration:none" href=books/{{books.index(book)}}> {{book.title}} - {{book.author}}</a>
+<a style="text-decoration:none" href=books/{{books.index(book)}}> {{book.author}} - {{book.title}} </a>
 </p>
 
+
+
 {% endfor %}
+
+<button type="submit">Add Book</button>
     
 {% endblock %}

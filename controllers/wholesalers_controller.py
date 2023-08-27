@@ -9,7 +9,7 @@ def wholesalers():
     wholesalers = wholesaler_repository.select_all()
     return render_template("wholesalers/index.html", wholesalers = wholesalers)
 
-@wholesalers_blueprint.route("/wholesalers/new")
+
 
 @wholesalers_blueprint.route("/wholesalers/<id>")
 
