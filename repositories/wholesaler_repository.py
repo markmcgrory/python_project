@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 
 from models.wholesaler import Wholesaler
 from models.book import Book
+import repositories.wholesaler_repository as wholesaler_repository
 
 
 def save(wholesaler):
@@ -11,6 +12,17 @@ def save(wholesaler):
     id = results[0]['id']
     wholesaler.id = id
     return wholesaler
+
+def select_all():
+    wholesalers = []
+
+    sql = "SELECT * FROM wholesalers"
+    results = run_sql(sql)
+
+    for row in results:
+        wholesaler = Wholesaler(row['name'], row['contact_person'], row['contact_phone'], row['contact_email'])
+        wholesalers.append(wholesaler)
+    return wholesalers
 
 def select(id):
     wholesaler = None

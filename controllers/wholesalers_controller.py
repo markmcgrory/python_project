@@ -7,4 +7,14 @@ wholesalers_blueprint = Blueprint("wholesalers", __name__)
 @wholesalers_blueprint.route("/wholesalers")
 def wholesalers():
     wholesalers = wholesaler_repository.select_all()
-    return render_template("wholesalers/index.html", all_wholesalers = wholesalers)
+    return render_template("wholesalers/index.html", wholesalers = wholesalers)
+
+@wholesalers_blueprint.route("/wholesalers/new")
+
+@wholesalers_blueprint.route("/wholesalers/<id>")
+
+
+@wholesalers_blueprint.route("/wholesalers/<id>/delete", methods=['POST'])
+def delete_wholesaler(id):
+    wholesaler_repository.delete(id)
+    return redirect('/wholesalers')
