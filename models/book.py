@@ -12,4 +12,11 @@ class Book:
         self.wholesaler = wholesaler
         self.id = id
 
+    def calculate_sell_price(self):
+        markup_amount = self.cost_price * (self.markup / 100)
+        sell_price = self.cost_price + markup_amount
+        return sell_price
+    
         
+        
+

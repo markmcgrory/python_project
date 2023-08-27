@@ -18,8 +18,20 @@ def select(id):
     values = [id]
     results = run_sql(sql, values)
 
+
+def delete(id):
+    sql = "DELETE FROM wholesalers WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 def delete_all():
     sql = "DELETE FROM wholesalers"
     run_sql(sql)
+
+def update(wholesaler):
+    sql = "UPDATE wholesalers SET (name, contact_person, contact_phone, contact_email) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [wholesaler.name, wholesaler.contact_person, wholesaler.contact_phone, wholesaler.contact_email]
+    print(values)
+    run_sql(sql, values)
 
 
