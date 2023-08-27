@@ -11,6 +11,11 @@ def books():
     books = book_repository.select_all()
     return render_template("books/index.html", books = books)
 
+@books_blueprint.route("/books/new", methods=['GET'])
+def new_book():
+    wholesalers = wholesaler_repository.select_all()
+    return render_template("books/new.html", wholesalers=wholesalers)
+
 @books_blueprint.route("/books/<id>", methods=['GET'])
 def show_book(id):
     book = book_repository.select(id)

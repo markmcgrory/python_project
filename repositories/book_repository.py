@@ -30,7 +30,6 @@ def select(id):
     sql = "SELECT * FROM books WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)
-
     if results:
         result = results[0]
         wholesaler = wholesaler_repository.select(result['wholesaler_id'])

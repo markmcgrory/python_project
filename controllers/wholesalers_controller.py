@@ -15,7 +15,6 @@ def show_wholesaler(id):
     wholesaler = wholesaler_repository.select(id)
     return render_template('wholesalers/show.html', wholesaler=wholesaler)
 
-
 @wholesalers_blueprint.route("/wholesalers/<id>/delete", methods=['POST'])
 def delete_wholesaler(id):
     wholesaler_repository.delete(id)

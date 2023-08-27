@@ -20,7 +20,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        wholesaler = Wholesaler(row['name'], row['contact_person'], row['contact_phone'], row['contact_email'])
+        wholesaler = Wholesaler(row['name'], row['contact_person'], row['contact_phone'], row['contact_email'], row['id'])
         wholesalers.append(wholesaler)
     return wholesalers
 
@@ -33,7 +33,6 @@ def select(id):
         result = results[0]
         wholesaler = Wholesaler(result['name'], result['contact_person'], result['contact_phone'], result['contact_email'], result['id'])
     return wholesaler
-
 
 def delete(id):
     sql = "DELETE FROM wholesalers WHERE id = %s"

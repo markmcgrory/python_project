@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form action="/books" method="post">
+
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" placeholder="Title" required autofocus>
+    </div>
+  
+    <div>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" placeholder="Author" required autofocus>
+    </div>
+  
+    <div>
+      <label for="genre">Genre:</label>
+      <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
+    </div>
+  
+  
+    <div>
+      <label for="wholesaler">Wholesaler:</label>
+      <select id="wholesaler" name="wholesaler_id">
+        {% for wholesaler in wholesalers %}
+          <option value="{{ wholesaler.id }}">{{ wholesaler.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    
+{% endblock %}
