@@ -2,9 +2,12 @@
 
 {% block content %}
 
+<p><h1>{{wholesaler.name}}</h1></p>
 <p>Contact Person: {{wholesaler.contact_person}}</p>
 <p>Contact phone: {{wholesaler.contact_phone}}</p>
 <p>Contact email: {{wholesaler.contact_email}}</p>
+
+<p><button><a href="/wholesalers/{{wholesaler.id}}/edit">Edit</a></button></p>
 
 {% endblock %}
 

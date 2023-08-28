@@ -45,7 +45,7 @@ def delete_all():
 
 def update(wholesaler):
     sql = "UPDATE wholesalers SET (name, contact_person, contact_phone, contact_email) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [wholesaler.name, wholesaler.contact_person, wholesaler.contact_phone, wholesaler.contact_email]
+    values = [wholesaler.name, wholesaler.contact_person, wholesaler.contact_phone, wholesaler.contact_email, wholesaler.id]
     print(values)
     run_sql(sql, values)
 

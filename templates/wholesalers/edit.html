@@ -1,5 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<form action="/wholesalers/{{wholesaler.id}}" method="post">
+
     
+    <div>
+        <label for="contact_person"></label>
+        <input type="text" id="contact_person" name="contact_person" value="{{wholesaler.contact_person}}" placeholder="Contact Person" required autofocus>
+    </div>
+    
+    <div>
+        <label for="contact_phone"></label>
+        <input type="text" id="contact_phone" name="contact_phone" value="{{wholesaler.contact_phone}}"placeholder="Contact Phone" required autofocus>
+      </div>
+    
+      <div>
+        <label for="contact_email"></label>
+        <input type="text" id="contact_email" name="contact_email" value="{{wholesaler.contact_email}}" placeholder="Contact Email" required autofocus>
+      </div>
+    
+      
+      <button>Confirm</button>
+    
+    </form>
+
 {% endblock %}

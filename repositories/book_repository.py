@@ -2,7 +2,7 @@ from db.run_sql import run_sql
 
 from models.book import Book
 import repositories.wholesaler_repository as wholesaler_repository
-
+import pdb
 
 def save(book):
     sql = "INSERT INTO books (title, author, genre, publisher, publication_year, copies, cost_price, markup, wholesaler_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING *"
@@ -46,8 +46,9 @@ def delete(id):
     run_sql(sql, values)
 
 def update(book):
+    # pdb.set_trace()
     sql = "UPDATE books SET (title, author, genre, publisher, publication_year, copies, cost_price, markup, wholesaler_id) = (%s, %s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [book.title, book.author, book.genre, book.publisher, book.publication_year, book.copies, book.cost_price, book.markup, book.wholesaler.id]
+    values = [book.title, book.author, book.genre, book.publisher, book.publication_year, book.copies, book.cost_price, book.markup, book.wholesaler.id, book.id]
     print(values)
     run_sql(sql, values)
 

@@ -20,7 +20,7 @@ CREATE TABLE books(
     publication_year INT,
     copies INT,
     cost_price FLOAT,
-    markup FLOAT,
+    markup INT,
     wholesaler_id INT NOT NULL REFERENCES wholesalers(id) ON DELETE CASCADE
 
 );

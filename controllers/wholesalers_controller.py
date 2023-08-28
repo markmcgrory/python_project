@@ -29,7 +29,17 @@ def create_wholesaler():
     wholesaler_repository.save(wholesaler)
     return redirect('/wholesalers')
 
-@wholesalers_blueprint.route("/wholesalers/<id>/delete", methods=['POST'])
-def delete_wholesaler(id):
-    wholesaler_repository.delete(id)
+@wholesalers_blueprint.route("/wholesalers/<id>/edit", methods=['GET'])
+def edit_wholesaler(id):
+    wholesaler = wholesaler_repository.select(id)
+    return render_template('wholesalers/edit.html', wholesaler=wholesaler)
+
+@wholesalers_blueprint.route("/wholesalers/<id>", methods=['POST'])
+def update_wholesaler(id):
+    name = request.form['name']
+    contact_person = request.form['contact_person']
+    contact_phone = request.form['contact_phone']
+    contact_email = request.form['contact_email']
+    wholesaler = Wholesaler(name, contact_person, contact_phone, contact_email, id)
+    wholesaler_repository.update(wholesaler)
     return redirect('/wholesalers')
