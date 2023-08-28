@@ -11,6 +11,7 @@ def books():
     books = book_repository.select_all()
     return render_template("books/index.html", books = books)
 
+
 @books_blueprint.route("/books/new", methods=['GET'])
 def new_book():
     wholesalers = wholesaler_repository.select_all()
@@ -27,7 +28,7 @@ def create_book():
     author = request.form['author']
     genre = request.form['genre']
     publisher = request.form['publisher']
-    publication_year = request.form['publication year']
+    publication_year = request.form['publication_year']
     copies = request.form['copies']
     cost_price = request.form['cost_price']
     markup = request.form['markup']
@@ -36,9 +37,10 @@ def create_book():
     book_repository.save(book)
     return redirect('/books')
 
+@books_blueprint.route("/books/<id>/edit", methods=['GET'])
+def edit_book(id):
+    book = book_repository.select(id)
+    wholesalers = wholesaler_repository.select_all()
+    return render_template('books/edit.html', book=book, wholesalers=wholesalers)
 
 
-@books_blueprint.route("/books/<id>/delete", methods=['POST'])
-def delete_book(id):
-    book_repository.delete(id)
-    return redirect('/books')
