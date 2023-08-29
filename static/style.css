@@ -6,7 +6,7 @@ display: flexbox;
 padding: 30px;
 margin-left: 10px;
 margin-top: 20px;
-border: 1px black solid;
+/* border: 1px black solid; */
 /* background-color: rgba(245, 245, 245, 0.571); */
 
 }
@@ -43,11 +43,21 @@ span {
     font-weight: bolder;
     text-decoration: none;
     font-family: newfont;
-    margin-left: 20px;
+    margin-left: 30px;
     color:black;
+    padding: 20px;
+    margin-right: 20px;
+
 }
 
-
+.search {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: large;
+}
 
 body {
 
@@ -63,9 +73,6 @@ body {
     
 }
 
-.header {
-    position:relative
-}
 
 
 select {
@@ -123,7 +130,8 @@ a {
 
 
 footer {
-    margin-top: 400px;
+    
+    margin-top: 200px;
     font-family: newfont;
     font-style: italic;
     font-weight:lighter;

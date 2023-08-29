@@ -16,7 +16,7 @@ def save(wholesaler):
 def select_all():
     wholesalers = []
 
-    sql = "SELECT * FROM wholesalers ORDER BY nameq"
+    sql = "SELECT * FROM wholesalers ORDER BY name"
     results = run_sql(sql)
 
     for row in results:
