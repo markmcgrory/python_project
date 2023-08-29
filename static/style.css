@@ -5,10 +5,20 @@ display: flexbox;
 /* justify-content: flex-end; */
 padding: 30px;
 margin-left: 10px;
-margin-top: 50px;
+margin-top: 20px;
+border: 1px black solid;
+/* background-color: rgba(245, 245, 245, 0.571); */
 
 }
 
+
+span {
+    color: red;
+}
+
+.warning {
+    color: red;
+}
 
 @font-face {
     font-family: newfont;
@@ -18,11 +28,12 @@ margin-top: 50px;
 .shop-name {
     
 
-    color: white;
-     font-size: large;
+    color: black;
+    font-size: x-large;
     font-style: italic;
     text-align: center;
     font-weight: bold;
+    /* background-color: rgba(245, 245, 245, 0.571); */
 
 }
 
@@ -33,28 +44,29 @@ margin-top: 50px;
     text-decoration: none;
     font-family: newfont;
     margin-left: 20px;
-    color:white;
+    color:black;
 }
+
+
 
 body {
 
     margin-top: 10px;
     text-align: center;
-    background-color:whitesmoke;
+    /* background: url('/static/image/nick-fewings-f2Bi-VBs71M-unsplash.jpg'); */
+    /* background-size: cover; */
+    /* background-color:rgba(245, 245, 245, 0.612); */
     color: black;
     font-family: newfont;
     font-size: large;
+    background-color: whitesmoke;
     
 }
 
-
-header {
-    
-    margin-top: 80px;
-    background-image: url('/static/image/nick-fewings-f2Bi-VBs71M-unsplash.jpg');
-    background-size: contain;
-    opacity: 0.6;
+.header {
+    position:relative
 }
+
 
 select {
    
@@ -71,7 +83,7 @@ select {
 
 font-size: large;
 font-family: newfont;
-background-color:beige;
+background-color:rgba(245, 245, 220, 0.708);
 border: 1px solid;
 border-radius: 8px;
 padding: 10px 20px;
@@ -85,15 +97,10 @@ cursor: pointer;
 }
 
 a {
-
-    color: black;
+    color:rgb(14, 104, 201);
     font-size:large;
-
 }
 
-a:hover {
-    color:blue;
-}
 
 .form {
     max-width: 500px;
@@ -116,7 +123,9 @@ a:hover {
 
 
 footer {
+    margin-top: 400px;
     font-family: newfont;
-    font-style: oblique;
-    font-weight: bolder;
+    font-style: italic;
+    font-weight:lighter;
+    
 }
