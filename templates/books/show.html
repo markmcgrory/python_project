@@ -22,8 +22,10 @@
 <p>Markup: {{book.markup}}</p>
 <p>Wholesaler: <a style="text-decoration:none" href="../wholesalers/{{book.wholesaler.id}}">{{book.wholesaler.name}}</p>
 
-<!-- <p>Wholesaler: {{book.wholesaler.name}}</p> -->
+<form action="/books/{{book.id}}/delete" method="post" id="delete"></form>
 
-<p><button class="button"><a href="/books/{{book.id}}/edit">Edit</a></button></p>
+
+<button class="button"><a href="/books/{{book.id}}/edit">Edit</a></button>
+<button class="button" type="submit" form="delete">Delete</button>
 
 {% endblock %}
