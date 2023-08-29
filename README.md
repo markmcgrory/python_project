@@ -6,4 +6,6 @@
 
 My approach was to build a "Bookshop Manager" web app aimed at staff working in a small bookstore. Functionality implemented: show book inventory, add to it or delete from it, show book details, update book details. Ditto with wholesalers, but the user can also filter books by wholesaler.
 
-#### 
+#### Languages
+
+Python, HTML, CSS, SQL
