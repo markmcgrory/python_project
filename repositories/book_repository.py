@@ -52,7 +52,7 @@ def update(book):
     print(values)
     run_sql(sql, values)
 
-def filter_by_wholesaler(wholesaler):
+def books_for_wholesaler(wholesaler):
     books = []
 
     sql = "SELECT * FROM books WHERE wholesaler_id = %s"
@@ -63,4 +63,6 @@ def filter_by_wholesaler(wholesaler):
         book = Book(row['title'], row['author'], row['genre'], row['publisher'], row['publication_year'], row ['copies'], row['cost_price'], row['markup'], wholesaler, row ['id'])
         books.append(book)
     return books
+
+
 

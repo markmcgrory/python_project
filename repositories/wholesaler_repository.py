@@ -50,3 +50,5 @@ def update(wholesaler):
     run_sql(sql, values)
 
 
+
+

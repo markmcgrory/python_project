@@ -2,6 +2,9 @@
 
 {% block content %}
 
+<br>
+<br>
+
 {% for wholesaler in wholesalers %}
 
 <p><a style="text-decoration:none" href=wholesalers/{{wholesaler.id}}> 
@@ -9,6 +12,6 @@
     
 {% endfor %}
 
-<button><a href="/wholesalers/new">Add Wholesaler</a></button>
+<button class="button"><a href="/wholesalers/new">Add Wholesaler</a></button>
     
 {% endblock %}

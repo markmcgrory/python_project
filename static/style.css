@@ -1,0 +1,122 @@
+.nav-bar {
+
+text-align: center;
+display: flexbox;
+/* justify-content: flex-end; */
+padding: 30px;
+margin-left: 10px;
+margin-top: 50px;
+
+}
+
+
+@font-face {
+    font-family: newfont;
+    src: url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  }
+
+.shop-name {
+    
+
+    color: white;
+     font-size: large;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.nav-item {
+
+    font-size: xx-large;
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: newfont;
+    margin-left: 20px;
+    color:white;
+}
+
+body {
+
+    margin-top: 10px;
+    text-align: center;
+    background-color:whitesmoke;
+    color: black;
+    font-family: newfont;
+    font-size: large;
+    
+}
+
+
+header {
+    
+    margin-top: 80px;
+    background-image: url('/static/image/nick-fewings-f2Bi-VBs71M-unsplash.jpg');
+    background-size: contain;
+    opacity: 0.6;
+}
+
+select {
+   
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: large;
+
+}
+
+.button {
+
+font-size: large;
+font-family: newfont;
+background-color:beige;
+border: 1px solid;
+border-radius: 8px;
+padding: 10px 20px;
+cursor: pointer;
+
+}
+
+.button:hover {
+
+    transform: scale(1.2);
+}
+
+a {
+
+    color: black;
+    font-size:large;
+
+}
+
+a:hover {
+    color:blue;
+}
+
+.form {
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 20px;
+    /* border: 2px solid black; */
+    font-weight: bold;
+    box-shadow: inset;
+    
+}
+
+.form input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: large;
+}
+
+
+footer {
+    font-family: newfont;
+    font-style: oblique;
+    font-weight: bolder;
+}

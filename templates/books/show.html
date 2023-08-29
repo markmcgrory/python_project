@@ -2,6 +2,9 @@
 
 {% block content %}
 
+<br>
+<br>
+
 <p><h1>{{book.title}}</h1></p>
 <hr>
 <p>Author: {{book.author}}</p>
@@ -17,10 +20,10 @@
     {% endif %}
 <p>Cost Price: {{book.cost_price}}</p>
 <p>Markup: {{book.markup}}</p>
-<p>Wholesaler: <a style="text-decoration:none" href="wholesalers/{{wholesaler.id}}">{{wholesaler.name}}</a></p>
+<p>Wholesaler: <a style="text-decoration:none" href="../wholesalers/{{book.wholesaler.id}}">{{book.wholesaler.name}}</p>
 
 <!-- <p>Wholesaler: {{book.wholesaler.name}}</p> -->
 
-<p><button><a href="/books/{{book.id}}/edit">Edit</a></button></p>
+<p><button class="button"><a href="/books/{{book.id}}/edit">Edit</a></button></p>
 
 {% endblock %}

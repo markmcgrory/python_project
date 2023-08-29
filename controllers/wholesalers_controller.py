@@ -17,7 +17,8 @@ def new_wholesaler():
 @wholesalers_blueprint.route("/wholesalers/<id>", methods=['GET'])
 def show_wholesaler(id):
     wholesaler = wholesaler_repository.select(id)
-    return render_template('wholesalers/show.html', wholesaler=wholesaler)
+    books = book_repository.books_for_wholesaler(wholesaler)
+    return render_template('wholesalers/show.html', wholesaler=wholesaler, books=books)
 
 @wholesalers_blueprint.route("/wholesalers", methods=['POST'])
 def create_wholesaler():
