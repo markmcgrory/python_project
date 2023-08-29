@@ -36,6 +36,9 @@ def select(id):
         book = Book(result['title'], result['author'], result['genre'], result['publisher'], result['publication_year'], result['copies'], result['cost_price'], result['markup'], wholesaler, result['id'])
     return book
 
+def delete_all():
+    sql = "DELETE FROM books"
+    run_sql(sql)
 
 def delete(id):
     sql = "DELETE FROM books WHERE id = %s"
