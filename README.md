@@ -14,10 +14,7 @@ Python, HTML, CSS, SQL
 
 "The project must be built using only:
 
-HTML / CSS
-Python
-Flask
-PostgreSQL and the psycopg"
+HTML / CSS, Python, Flask, PostgreSQL and the psycopg."
 
 
 
