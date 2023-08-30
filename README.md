@@ -16,14 +16,10 @@ HTML / CSS, Python, Flask, PostgreSQL and the psycopg."
 #### 1. Git clone the repo on local machine
 ```
 #terminal
-git clone ## Setup & Installation
-#### 1. Git clone the repo on your local machine
-```
-#terminal
 git clone git@github.com:markmcgrory/python_project.git
 ```
 #### 2. Create the database
-- Make sure PostgreSQL/PSYCOPG2 are installed on the machine
+- Check wether PostgreSQL/PSYCOPG2 are installed on the machine
 ```
 #terminal
 psql
@@ -52,59 +48,3 @@ python3 console.py
 #terminal
 flask run
 ```
-
-
-
-
-
-
-
-
-
-
-```
-#### 2. Create the database
-- Make sure PostgreSQL/PSYCOPG2 are installed on the machine
-```
-#terminal
-psql
-```
-- If not installed, find the installation guide [here](https://www.psycopg.org/docs/install.html)
-- Create database
-```
-#terminal
-createdb bookshop_manager
-```
-- initializing the tables for the database
-```
-#terminal
-psql -d bookshop_manager -f db/bookshop_manager.sql
-```
-#### 3. Initialize the database
-- populate the database with dummy data
-```
-#terminal (cd in the root folder)
-python3 console.py
-```
-#### 4. Starting the app
-- make sure that nothing else is running on your localhost port 4999. If so, change the port on the .flaskenv file to a different one (like 5000)
-- start the app
-```
-#terminal
-flask run
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
