@@ -13,7 +13,7 @@ My approach was to build a "Bookshop Manager" web app aimed at staff working in 
 HTML / CSS, Python, Flask, PostgreSQL and the psycopg."
 
 ## Setup & Installation
-#### 1. Git clone the repo on local machine
+#### 1. Git clone the repo on your local machine
 ```
 #terminal
 git clone git@github.com:markmcgrory/python_project.git
@@ -30,7 +30,7 @@ psql
 #terminal
 createdb bookshop_manager
 ```
-- initializing the tables for the database
+- initialise the tables for the database
 ```
 #terminal
 psql -d bookshop_manager -f db/bookshop_manager.sql
