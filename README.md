@@ -9,3 +9,17 @@ My approach was to build a "Bookshop Manager" web app aimed at staff working in 
 ### Languages
 
 Python, HTML, CSS, SQL
+
+### Rules
+
+"The project must be built using only:
+
+HTML / CSS
+Python
+Flask
+PostgreSQL and the psycopg"
+
+
+
+
+
