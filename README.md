@@ -15,9 +15,6 @@ My approach was to build a "Bookshop Manager" web app aimed at staff working in 
 
 HTML / CSS, Python, Flask, PostgreSQL and the psycopg."
 
-<img width="1262" alt="Screenshot 2023-11-24 at 20 53 01" src="https://github.com/markmcgrory/python_project/assets/136241504/c9d5b53d-850f-4108-b9c1-4ee6384bf6fd">
-
-
 ## Setup & Installation
 #### 1. Git clone the repo locally
 ```
@@ -56,3 +53,7 @@ python3 console.py
 #terminal
 flask run
 ```
+
+<img width="1262" alt="Screenshot 2023-11-24 at 20 53 01" src="https://github.com/markmcgrory/python_project/assets/136241504/c9d5b53d-850f-4108-b9c1-4ee6384bf6fd">
+
+<img width="1237" alt="Screenshot 2023-11-24 at 20 58 12" src="https://github.com/markmcgrory/python_project/assets/136241504/8a8f9be4-4876-455f-9fab-106d66483985">
