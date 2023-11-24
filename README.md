@@ -13,13 +13,13 @@ My approach was to build a "Bookshop Manager" web app aimed at staff working in 
 HTML / CSS, Python, Flask, PostgreSQL and the psycopg."
 
 ## Setup & Installation
-#### 1. Git clone the repo on your local machine
+#### 1. Git clone the repo locally
 ```
 #terminal
 git clone git@github.com:markmcgrory/python_project.git
 ```
 #### 2. Create the database
-- Check wether PostgreSQL/PSYCOPG2 are installed on the machine
+- Check whether PostgreSQL/PSYCOPG2 are installed on your computer
 ```
 #terminal
 psql
@@ -30,7 +30,7 @@ psql
 #terminal
 createdb bookshop_manager
 ```
-- initialise the tables for the database
+- Initialise the tables for the database
 ```
 #terminal
 psql -d bookshop_manager -f db/bookshop_manager.sql
@@ -42,7 +42,7 @@ psql -d bookshop_manager -f db/bookshop_manager.sql
 python3 console.py
 ```
 #### 4. Starting the app
-- make sure that nothing else is running on your localhost port 4999. If so, change the port on the .flaskenv file to a different one (like 5000)
+- Make sure that nothing else is running on your localhost port 4999. If so, change the port on the .flaskenv file to a different one (like 5000)
 - start the app
 ```
 #terminal
